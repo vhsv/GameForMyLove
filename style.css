@@ -1,0 +1,216 @@
+/* POGODA */
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+    font-family: "Pixelify Sans", sans-serif;
+    overflow: hidden;
+}
+
+body {
+  background-size: cover;
+  background-position: center;
+}
+
+body.clear {
+  background-image: url("img/sunny.png");
+}
+
+body.rain {
+  background-image: url("img/rainy.png");
+}
+
+body.snow {
+  background-image: url("img/snow.png");
+}
+/* POSTACIE */
+div.avatars
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1100px;
+    padding: 0;
+}
+div.scene .avatar img
+{
+    width: 350px;
+}
+div.scene .avatar
+{
+    width: 300px;
+}
+
+/* INTERAKCJA MODAL STYLE */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    border: 8px solid #8b4513;
+    border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><rect width="16" height="16" fill="%238b4513"/><rect x="2" y="2" width="12" height="12" fill="%23f5deb3"/></svg>') 8 stretch;
+    padding: 0;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+    image-rendering: pixelated;
+}
+
+.modal-header {
+    background-color: #8b4513;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #654321;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 53px;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.close-modal {
+    background: #ff6b6b;
+    border: 3px solid #8b0000;
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-family: "Pixelify Sans", sans-serif;
+    image-rendering: pixelated;
+}
+
+.close-modal:hover {
+    background: #ff5252;
+}
+
+.modal-body {
+    padding: 25px;
+    background-color: #f5deb3;
+}
+
+.modal-body p {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #654321;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.action-btn {
+    background-color: #4a752c;
+    color: white;
+    border: 4px solid #2d501a;
+    padding: 15px 10px;
+    font-size: 30px;
+    font-family: "Pixelify Sans", sans-serif;
+    cursor: pointer;
+    image-rendering: pixelated;
+    transition: all 0.1s;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.action-btn:hover {
+    background-color: #5a8c3c;
+    transform: translateY(-2px);
+}
+
+.action-btn:active {
+    transform: translateY(2px);
+}
+
+/* Kolory dla różnych akcji */
+.action-btn[data-action="kiss"] { background-color: #e63946; border-color: #a4161a; }
+.action-btn[data-action="hug"] { background-color: #457b9d; border-color: #1d3557; }
+.action-btn[data-action="hand"] { background-color: #2a9d8f; border-color: #1d6f65; }
+
+.modal-footer {
+    background-color: #8b4513;
+    padding: 15px;
+    min-height: 60px;
+    border-top: 4px solid #654321;
+}
+
+#reaction-text {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 2px 2px 0 #000;
+    min-height: 30px;
+}
+
+.avatar {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+}
+
+.avatar:active {
+    transform: scale(0.95);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes heart {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
+
+.heart-effect {
+    position: absolute;
+    font-size: 40px;
+    animation: heart 1s ease-out;
+    pointer-events: none;
+    z-index: 100;
+}
+.reaction
+{
+    display: none;
+}
+
+
+
+/* ZNAK */
+div.sign
+{
+    display: flex;
+    margin-top: 200px;
+}
+div.sign img
+{
+    padding: 0;
+    margin: 0;
+    width: 600px;
+}
+div.sign p
+{
+    position: absolute;
+    font-size: 50px;
+}
+

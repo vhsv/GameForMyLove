@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="scene">
+
+        <div class="avatars">
+            <div class="Emi avatar">
+                <img src="img/EmiliaNormal.png" alt="">
+            </div>
+
+            <div class="Julia avatar">
+                <img src="img/JuliaNormal.png" id="juliaImgAvatar" alt="">
+            </div>
+
+            <div class="reaction">
+                <img src="" alt="" id="reactionImg">
+            </div>
+
+            <!-- Modal do interakcji -->
+            <div id="action-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Julia</h2>
+                        <button class="close-modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Co chcesz zrobić?</p>
+                        <div class="action-buttons">
+                            <button class="action-btn" data-action="kiss">Pocałuj</button>
+                            <button class="action-btn" data-action="hug">Przytul</button>
+                            <button class="action-btn" data-action="hand">Złap za rękę</button>
+                            <button class="action-btn" data-action="kind">Powiedz miłe słówko</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sign">
+            <img src="img/wspomnieniaSign.png" alt="">
+            <img src="img/emptySign.png" alt="">
+            <img src="img/emptySign.png" alt="">
+        </div>
+
+
+    </div>
+
+
+
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/interactions.js"></script>
+</body>
+</html>
