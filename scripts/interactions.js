@@ -49,7 +49,22 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 document.querySelector(".reaction").style.display = "block";
                 document.getElementById("reactionImg").src = "img/kiss.png";
-                document.getElementById("reactionImg").style.width = "450px";
+                document.getElementById("reactionImg").style.width = "350px";
+                setTimeout(function() {
+                    document.querySelector(".reaction").style.display = "none";
+                    document.getElementById("reactionImg").src = "";
+
+
+                    document.querySelectorAll('.avatar').forEach(avatar => {
+                        avatar.style.display = "block";
+                    });
+                }, 2000);
+            }
+            if(action === "hug")
+            {
+                document.querySelector(".reaction").style.display = "block";
+                document.getElementById("reactionImg").src = "img/hug.png";
+                document.getElementById("reactionImg").style.width = "350px";
                 setTimeout(function() {
                     document.querySelector(".reaction").style.display = "none";
                     document.getElementById("reactionImg").src = "";
@@ -72,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.getElementById("juliaImgAvatar").src = "img/JuliaNormal.png"
                 }, 2000);
             }
+            
 
             closeModal();
         });
@@ -100,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             document.body.appendChild(heart);
             
-            // Usuń po animacji
+            
             setTimeout(() => {
                 heart.remove();
             }, 2000);
