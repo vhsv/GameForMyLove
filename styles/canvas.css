@@ -1,0 +1,91 @@
+body {
+    font-family: 'Courier New', monospace;
+    background: #1a1a1a;
+    color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+canvas {
+    border: 3px solid #4CAF50;
+    border-radius: 8px;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    cursor: crosshair;
+    background: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.controls {
+    margin: 20px 0;
+    padding: 15px;
+    background: #2a2a2a;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+#colorPicker {
+    width: 60px;
+    height: 40px;
+    border: 2px solid #4CAF50;
+    border-radius: 4px;
+    margin-right: 15px;
+    cursor: pointer;
+    background: #333;
+}
+
+#saveBtn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+#saveBtn:hover {
+    background: #45a049;
+}
+
+#saveBtn:active {
+    transform: scale(0.98);
+}
+
+#gallery {
+    margin-top: 30px;
+    padding: 20px;
+    background: #2a2a2a;
+    border-radius: 8px;
+    min-height: 150px;
+}
+
+#gallery img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 2px solid #444;
+    border-radius: 4px;
+    object-fit: contain;
+    background: #000;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+    border-color: #4CAF50;
+    cursor: pointer;
+}
+
+#gallery p {
+    margin-top: 20px;
+    color: #888;
+}

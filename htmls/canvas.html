@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Pixel Art Canvas</title>
+<link rel="stylesheet" href="../styles/canvas.css">
+</head>
+<body>
+<h1>Pixel Art Canvas</h1>
+
+<canvas id="canvas" width="500" height="500"></canvas>
+
+<div class="controls">
+    <input type="color" id="colorPicker" value="#000000">
+    <button id="saveBtn">Zapisz rysunek</button>
+</div>
+
+<h2>Dotychczasowe rysunki</h2>
+<div id="gallery"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../scripts/canvas.js"></script>
+</body>
+</html>

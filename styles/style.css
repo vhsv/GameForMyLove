@@ -11,19 +11,10 @@ html, body {
 body {
   background-size: cover;
   background-position: center;
+  background-image: url("../img/sunny.png");
 }
 
-body.clear {
-  background-image: url("img/sunny.png");
-}
 
-body.rain {
-  background-image: url("img/rainy.png");
-}
-
-body.snow {
-  background-image: url("img/snow.png");
-}
 /* POSTACIE */
 div.avatars
 {
@@ -201,12 +192,13 @@ div.sign
 {
     display: flex;
     margin-top: 200px;
+    justify-content: center;
 }
 div.sign img
 {
     padding: 0;
-    margin: 0;
-    width: 600px;
+    margin: 8px;
+    width: 350px;
 }
 div.sign p
 {

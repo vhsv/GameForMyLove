@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/stylequiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <title>Quiz o Nas</title>
+</head>
+<body>
+    <div id="quiz-container">
+        <!-- Ekran startowy -->
+        <div id="start-screen" class="screen active">
+            <h1>Quiz o Nas</h1>
+            <button onclick="startQuiz()" class="pixel-button">Rozpocznij Quiz</button>
+            <a href="../index.html" class="back-btn">← Wróć do pokoju</a>
+        </div>
+
+        <!-- Ekran pytań -->
+        <div id="question-screen" class="screen">
+            <div class="question-header">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="question-counter" id="question-counter">Pytanie 1/5</div>
+            </div>
+            
+            <div class="question-content">
+                <h2 id="question-text">Tu pojawi się pytanie</h2>
+                <div class="options-container" id="options-container">
+                    <!-- Opcje odpowiedzi będą dodawane dynamicznie -->
+                </div>
+            </div>
+
+            <div class="quiz-footer">
+                <div class="score-display" id="score-display">Wynik: 0/0</div>
+                <button onclick="nextQuestion()" class="pixel-button" id="next-btn" style="display: none;">Następne pytanie →</button>
+            </div>
+        </div>
+
+        <!-- Ekran wyników -->
+        <div id="result-screen" class="screen">
+            <h1>Twój wynik!</h1>
+            <div class="result-box">
+                <div class="score-circle">
+                    <span id="final-score">0</span>
+                    <span class="score-total">/5</span>
+                </div>
+            </div>
+
+            <div class="result-buttons">
+                <button onclick="restartQuiz()" class="pixel-button">Zagraj jeszcze raz</button>
+                <a href="../index.html" class="pixel-button secondary">Wróć do pokoju</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/quiz.js"></script>
+</body>
+</html>
