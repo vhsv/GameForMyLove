@@ -34,6 +34,11 @@ const quizData = [
         question: "Moje ulubione żarcie?",
         options: ["Sushi", "Kebab", "Pizza"],
         correct: 1
+    },
+    {
+        question: "Jak do ciebie mówiłam jak zaczęłyśmy gadać?",
+        options: ["Misiu", "Słońce", "Słodka", "Emi"],
+        correct: 2
     }
 ];
 

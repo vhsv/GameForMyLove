@@ -38,21 +38,26 @@
             </div>
         </div>
 
-        <!-- Ekran wyników -->
         <div id="result-screen" class="screen">
             <h1>Twój wynik!</h1>
             <div class="result-box">
-                <div class="score-circle">
-                    <span id="final-score">0</span>
-                    <span class="score-total">/5</span>
+                <div class="score-display">
+                    <div class="score-number">
+                        <span id="final-score">0</span>
+                        <span class="score-total">/8</span>
+                    </div>
+                    <div class="score-text">poprawnych odpowiedzi</div>
                 </div>
+                
+                <div id="result-message"></div>
+                <div class="result-emoji" id="result-emoji"></div>
             </div>
 
             <div class="result-buttons">
                 <button onclick="restartQuiz()" class="pixel-button">Zagraj jeszcze raz</button>
                 <a href="../index.html" class="pixel-button secondary">Wróć do pokoju</a>
-            </div>
         </div>
+    </div>
     </div>
 
     <script src="../scripts/quiz.js"></script>

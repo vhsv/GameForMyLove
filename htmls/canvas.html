@@ -1,24 +1,100 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<title>Pixel Art Canvas</title>
-<link rel="stylesheet" href="../styles/canvas.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Zaawansowany Edytor Rysunku</title>
+    <link rel="stylesheet" href="../styles/canvas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<h1>Pixel Art Canvas</h1>
+    <div class="container">
+        <a href="../index.html" class="back-btn">← Wróć do pokoju</a>
+        <h1><i class="fas fa-paint-brush"></i> Rysowanie</h1>
 
-<canvas id="canvas" width="500" height="500"></canvas>
-
-<div class="controls">
-    <input type="color" id="colorPicker" value="#000000">
-    <button id="saveBtn">Zapisz rysunek</button>
-</div>
-
-<h2>Dotychczasowe rysunki</h2>
-<div id="gallery"></div>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="../scripts/canvas.js"></script>
+        <!-- Canvas -->
+        <div class="canvas-container">
+            <canvas id="canvas" width="1000" height="1000"></canvas>
+        </div>
+        
+        <!-- Kontrolki -->
+        <div class="controls-container">
+            <!-- Narzędzia -->
+            <div class="controls-section">
+                <h3><i class="fas fa-tools"></i> Narzędzia</h3>
+                <div class="tool-buttons">
+                    <button id="brushBtn" class="tool-btn active">
+                        <i class="fas fa-paint-brush"></i> Pędzel
+                    </button>
+                    <button id="eraserBtn" class="tool-btn">
+                        <i class="fas fa-eraser"></i> Gumka
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Kolor i rozmiar -->
+            <div class="controls-section">
+                <div class="controls-grid">
+                    <div class="control-group">
+                        <label for="colorPicker"><i class="fas fa-palette"></i> Kolor pędzla:</label>
+                        <input type="color" id="colorPicker" value="#3498db">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="brushSize"><i class="fas fa-brush"></i> Rozmiar: <span id="brushSizeValue">5px</span></label>
+                        <input type="range" id="brushSize" min="1" max="50" value="5" >
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Nazwa i zapis -->
+            <div class="controls-section">
+                <h3><i class="fas fa-save"></i> Zapis</h3>
+                <div class="name-input">
+                    <input type="text" id="drawingName" placeholder="Nazwij rysunek">
+                </div>
+            </div>
+            
+            <!-- Akcje -->
+            <div class="controls-section">
+                <h3><i class="fas fa-play-circle"></i> Akcje</h3>
+                <div class="action-buttons">
+                    <button id="clearBtn" class="action-btn">
+                        <i class="fas fa-broom"></i> Wyczyść Canvas
+                    </button>
+                    <button id="saveBtn" class="action-btn">
+                        <i class="fas fa-save"></i> Zapisz Rysunek
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Galeria -->
+        <div class="gallery-section">
+            <h2><i class="fas fa-images"></i> Nasza Galeria</h2>
+            <div id="gallery">
+                <p>Ładowanie galerii...</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Nasz kod -->
+    <script src="../scripts/canvas.js"></script>
+    
+    <script>
+        // Zapobieganie domyślnym zachowaniom
+        document.addEventListener('touchmove', function(e) {
+            if(e.target.tagName === 'CANVAS') {
+                e.preventDefault();
+            }
+        }, { passive: false });
+        
+        // Auto-focus na polu nazwy
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('drawingName').focus();
+        });
+    </script>
 </body>
 </html>
