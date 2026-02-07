@@ -11,7 +11,7 @@
     --dark: #2c3e50;
     --gray: #7f8c8d;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --radius: 10px;
+    --radius: 8px; /* Zmniejszone z 10px */
 }
 
 * {
@@ -27,43 +27,43 @@ html, body {
     font-family: "Pixelify Sans", sans-serif;
 }
 
-
 body {
     font-family: "Pixelify Sans", sans-serif;
     background: url("../img/bgCanvas.png");
     color: var(--dark);
     margin: 0;
-    padding: 20px;
+    padding: 15px; /* Zmniejszone z 20px */
     min-height: 100vh;
     background-size: cover;
     background-position: center;
 }
-.back-btn
-{
-    font-size: 55px;
+
+.back-btn {
+    font-size: 18px; /* Zmniejszone z 25px */
     text-align: center;
+    margin-bottom: 10px;
 }
+
 .container {
-    max-width: 1200px;
-    margin: 30 auto;
+    max-width: 1100px; /* Zmniejszone z 1200px */
+    margin: 20 auto; /* Zmniejszone z 30 auto */
     background: rgba(240, 163, 255, 0.247);
     border-radius: var(--radius);
-    padding: 30px;
+    padding: 20px; /* Zmniejszone z 30px */
     box-shadow: var(--shadow);
 }
 
 h1 {
     color: var(--dark);
-    margin-bottom: 10px;
-    font-size: 4rem;
+    margin-bottom: 8px; /* Zmniejszone z 10px */
+    font-size: 1.6rem; /* Zmniejszone z 2rem */
     text-align: center;
-
 }
 
 .subtitle {
     color: var(--gray);
-    margin-bottom: 30px;
-    font-size: 1.1em;
+    margin-bottom: 20px; /* Zmniejszone z 30px */
+    font-size: 0.95em; /* Zmniejszone z 1.1em */
     text-align: center;
 }
 
@@ -77,20 +77,21 @@ canvas {
     aspect-ratio: 1/1;
     touch-action: none;
     margin: auto;
+    max-height: 400px; /* Ograniczenie wysokości */
 }
 
 /* KONTROLS */
 .controls-container {
     background-color: rgba(255, 101, 209, 0.247);
     border-radius: var(--radius);
-    padding: 10px;
-    margin: 30px 0;
+    padding: 8px; /* Zmniejszone z 10px */
+    margin: 20px 0; /* Zmniejszone z 30px 0 */
     box-shadow: var(--shadow);
-    font-size: 50px;
+    font-size: 22px; /* Zmniejszone z 30px */
 }
 
 .controls-section {
-    margin-bottom: 25px;
+    margin-bottom: 20px; /* Zmniejszone z 25px */
 }
 
 .controls-section:last-child {
@@ -99,40 +100,40 @@ canvas {
 
 .controls-section h3 {
     color: var(--dark);
-    margin-bottom: 15px;
-    font-size: 1.2em;
+    margin-bottom: 12px; /* Zmniejszone z 15px */
+    font-size: 1.1em; /* Zmniejszone z 1.2em */
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px; /* Zmniejszone z 10px */
 }
 
 .controls-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Zmniejszone z 250px */
+    gap: 20px; /* Zmniejszone z 25px */
 }
 
 .control-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px; /* Zmniejszone z 10px */
 }
 
 .control-group label {
     font-weight: 600;
     color: var(--dark);
-    font-size: 0.95em;
+    font-size: 0.9em; /* Zmniejszone z 0.95em */
 }
 
 #colorPicker {
-    width: 80px;
-    height: 80px;
-    border: 3px solid var(--primary);
+    width: 60px; /* Zmniejszone z 80px */
+    height: 60px; /* Zmniejszone z 80px */
+    border: 2px solid var(--primary); /* Zmniejszone z 3px */
     border-radius: 50%;
     cursor: pointer;
     background: white;
     padding: 0;
-    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 3px 8px rgba(52, 152, 219, 0.3); /* Zmniejszone z 0 4px 10px */
     transition: transform 0.2s;
     align-self: center;
 }
@@ -143,47 +144,47 @@ canvas {
 
 #brushSize {
     width: 100%;
-    height: 30px;
+    height: 25px; /* Zmniejszone z 30px */
     background: linear-gradient(to right, var(--primary), #9b59b6);
-    border-radius: 5px;
+    border-radius: 4px; /* Zmniejszone z 5px */
     outline: none;
-    padding: 10px;
+    padding: 8px; /* Zmniejszone z 10px */
 }
 
 #brushSize::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 24px;
-    height: 24px;
+    width: 20px; /* Zmniejszone z 24px */
+    height: 20px; /* Zmniejszone z 24px */
     border-radius: 50%;
     background: var(--dark);
     cursor: pointer;
-    border: 3px solid white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border: 2px solid white; /* Zmniejszone z 3px */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Zmniejszone z 0 2px 5px */
 }
 
 .brush-preview {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-top: 10px;
+    gap: 12px; /* Zmniejszone z 15px */
+    margin-top: 8px; /* Zmniejszone z 10px */
 }
 
 #brushPreview {
     border-radius: 50%;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Zmniejszone z 0 2px 5px */
 }
 
 .brush-size-options {
     display: flex;
-    gap: 10px;
+    gap: 8px; /* Zmniejszone z 10px */
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 8px; /* Zmniejszone z 10px */
 }
 
 .brush-size-option {
-    width: 40px;
-    height: 40px;
+    width: 32px; /* Zmniejszone z 40px */
+    height: 32px; /* Zmniejszone z 40px */
     border-radius: 50%;
     background: var(--light);
     display: flex;
@@ -193,6 +194,7 @@ canvas {
     font-weight: bold;
     transition: all 0.2s;
     border: 2px solid transparent;
+    font-size: 14px; /* Dodane */
 }
 
 .brush-size-option:hover {
@@ -207,14 +209,14 @@ canvas {
 
 .tool-buttons {
     display: flex;
-    gap: 15px;
+    gap: 12px; /* Zmniejszone z 15px */
     flex-wrap: wrap;
 }
 
 .tool-btn {
     flex: 1;
-    min-width: 120px;
-    padding: 15px;
+    min-width: 100px; /* Zmniejszone z 120px */
+    padding: 12px; /* Zmniejszone z 15px */
     border: none;
     border-radius: var(--radius);
     background: white;
@@ -224,42 +226,41 @@ canvas {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px; /* Zmniejszone z 10px */
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    font-size: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Zmniejszone z 0 2px 5px */
+    font-size: 16px; /* Zmniejszone z 20px */
 }
 
 .tool-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15); /* Zmniejszone z 0 4px 10px */
 }
 
 .tool-btn.active {
     background: var(--primary);
     color: white;
-    box-shadow: 0 4px 15px rgba(219, 52, 211, 0.4);
+    box-shadow: 0 3px 10px rgba(219, 52, 211, 0.4); /* Zmniejszone z 0 4px 15px */
 }
 
 #eraserBtn.active {
     background: var(--danger);
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+    box-shadow: 0 3px 10px rgba(231, 76, 60, 0.4); /* Zmniejszone z 0 4px 15px */
 }
 
 .name-input {
     display: flex;
-    gap: 10px;
+    gap: 8px; /* Zmniejszone z 10px */
     align-items: center;
 }
 
 #drawingName {
     flex: 1;
-    padding: 12px 15px;
+    padding: 10px 12px; /* Zmniejszone z 12px 15px */
     border: 2px solid #ddd;
     border-radius: var(--radius);
-    font-size: 35px;
+    font-size: 20px; /* Zmniejszone z 25px */
     transition: border-color 0.3s;
-
 }
 
 #drawingName:focus {
@@ -269,14 +270,14 @@ canvas {
 
 .action-buttons {
     display: flex;
-    gap: 15px;
+    gap: 12px; /* Zmniejszone z 15px */
     flex-wrap: wrap;
 }
 
 .action-btn {
     flex: 1;
-    min-width: 150px;
-    padding: 16px;
+    min-width: 130px; /* Zmniejszone z 150px */
+    padding: 14px; /* Zmniejszone z 16px */
     border: none;
     border-radius: var(--radius);
     color: white;
@@ -285,15 +286,15 @@ canvas {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px; /* Zmniejszone z 10px */
     transition: all 0.3s ease;
-    font-size: 16px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-size: 10px; /* Zmniejszone z 16px */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2); /* Zmniejszone z 0 4px 15px */
 }
 
 .action-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transform: translateY(-2px); /* Zmniejszone z -3px */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Zmniejszone z 0 6px 20px */
 }
 
 .action-btn:active {
@@ -302,34 +303,33 @@ canvas {
 
 #clearBtn {
     background: pink;
-    font-size: 35px;
+    font-size: 18px; /* Zmniejszone z 35px */
 }
 
 #saveBtn {
     background: rgb(96, 139, 231);
-    font-size: 35px;
+    font-size: 18px; /* Zmniejszone z 35px */
 }
 
 /* GALERIA */
 .gallery-section {
-    margin-top: 40px;
+    margin-top: 30px; /* Zmniejszone z 40px */
 }
 
 .gallery-section h2 {
     color: var(--dark);
-    margin-bottom: 25px;
-    font-size: 60px;
+    margin-bottom: 20px; /* Zmniejszone z 25px */
+    font-size: 18px; /* Zmniejszone z 20px */
     display: flex;
     align-items: center;
-    gap: 10px;
-
+    gap: 8px; /* Zmniejszone z 10px */
 }
 
 #gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Zmniejszone z 300px */
+    gap: 20px; /* Zmniejszone z 25px */
+    margin-top: 15px; /* Zmniejszone z 20px */
 }
 
 .gallery-item {
@@ -340,16 +340,18 @@ canvas {
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    font-size: 30px;
+    font-size: 15px; /* Zmniejszone z 30px */
+    width: 80px; /* Zmniejszone z 100px */
+    height: 380px; /* Zmniejszone z 150px */
 }
 
 .gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: translateY(-4px); /* Zmniejszone z -5px */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15); /* Zmniejszone z 0 8px 25px */
 }
 
 .gallery-header {
-    padding: 15px;
+    padding: 12px; /* Zmniejszone z 15px */
     background: var(--light);
     border-bottom: 1px solid #ddd;
 }
@@ -357,20 +359,19 @@ canvas {
 .gallery-filename {
     font-weight: 600;
     color: var(--dark);
-    font-size: 1.1em;
+    font-size: 1em; /* Zmniejszone z 1.1em */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .gallery-date {
-    font-size: 0.9em;
+    font-size: 0.85em; /* Zmniejszone z 0.9em */
     color: var(--gray);
-    margin-top: 5px;
+    margin-top: 4px; /* Zmniejszone z 5px */
 }
 
 .gallery-img-wrapper {
-    padding: 15px;
     background: white;
     flex: 1;
     display: flex;
@@ -380,24 +381,24 @@ canvas {
 
 .gallery-image {
     width: 100%;
-    height: 300px;
+    height: 200px;
     object-fit: contain;
-    border-radius: 5px;
+    border-radius: 4px; /* Zmniejszone z 5px */
     background: #f8f9fa;
 }
 
 .gallery-actions {
-    padding: 15px;
+    padding: 12px; /* Zmniejszone z 15px */
     display: flex;
-    gap: 10px;
+    gap: 8px; /* Zmniejszone z 10px */
     border-top: 1px solid #ddd;
 }
 
 .gallery-actions .action-btn {
     min-width: auto;
     flex: 1;
-    padding: 12px;
-    font-size: 25px;
+    padding: 10px; /* Zmniejszone z 12px */
+    font-size: 10px; /* Zmniejszone z 15px */
 }
 
 .gallery-actions .download-btn {
@@ -411,34 +412,34 @@ canvas {
 .no-drawings {
     grid-column: 1 / -1;
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px 15px; /* Zmniejszone z 60px 20px */
     color: var(--gray);
 }
 
 .no-drawings i {
-    font-size: 3em;
-    margin-bottom: 20px;
+    font-size: 2.5em; /* Zmniejszone z 3em */
+    margin-bottom: 15px; /* Zmniejszone z 20px */
     color: #ddd;
 }
 
 /* NOTYFIKACJE */
 .notification {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 15px 20px;
+    top: 15px; /* Zmniejszone z 20px */
+    right: 15px; /* Zmniejszone z 20px */
+    padding: 12px 16px; /* Zmniejszone z 15px 20px */
     border-radius: var(--radius);
     background: white;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Zmniejszone z 0 5px 20px */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15px;
+    gap: 12px; /* Zmniejszone z 15px */
     transform: translateX(100%);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
     z-index: 1000;
-    max-width: 400px;
+    max-width: 350px; /* Zmniejszone z 400px */
 }
 
 .notification.show {
@@ -447,15 +448,15 @@ canvas {
 }
 
 .notification-success {
-    border-left: 5px solid var(--secondary);
+    border-left: 4px solid var(--secondary); /* Zmniejszone z 5px */
 }
 
 .notification-error {
-    border-left: 5px solid var(--danger);
+    border-left: 4px solid var(--danger); /* Zmniejszone z 5px */
 }
 
 .notification-info {
-    border-left: 5px solid var(--primary);
+    border-left: 4px solid var(--primary); /* Zmniejszone z 5px */
 }
 
 .notification-close {
@@ -464,7 +465,7 @@ canvas {
     color: var(--gray);
     cursor: pointer;
     padding: 0;
-    font-size: 1.2em;
+    font-size: 1.1em; /* Zmniejszone z 1.2em */
     transition: color 0.2s;
 }
 
@@ -475,11 +476,11 @@ canvas {
 /* RESPONSYWNOŚĆ */
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 8px; /* Zmniejszone z 10px */
     }
     
     .container {
-        padding: 20px;
+        padding: 15px; /* Zmniejszone z 20px */
     }
     
     .controls-grid {
@@ -505,23 +506,74 @@ canvas {
     .gallery-actions {
         flex-direction: column;
     }
+    
+    canvas {
+        max-height: 350px; /* Mniejsze na mobile */
+    }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 2em;
+        font-size: 1.4em; /* Zmniejszone z 2em */
     }
     
     .controls-container {
-        padding: 15px;
+        padding: 12px; /* Zmniejszone z 15px */
     }
     
     #colorPicker {
-        width: 60px;
-        height: 60px;
+        width: 50px; /* Zmniejszone z 60px */
+        height: 50px; /* Zmniejszone z 60px */
     }
     
     .brush-size-options {
         justify-content: center;
+    }
+    
+    .gallery-item {
+        width: 100%; /* Pełna szerokość na małych ekranach */
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .tool-btn {
+        min-width: 100%;
+        font-size: 14px;
+    }
+    
+    .back-btn {
+        font-size: 16px;
+    }
+}
+
+/* Dla bardzo małych ekranów */
+@media (max-width: 320px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .controls-container {
+        padding: 8px;
+        font-size: 18px;
+    }
+    
+    #clearBtn, #saveBtn {
+        font-size: 22px;
+    }
+    
+    #drawingName {
+        font-size: 16px;
+    }
+}
+
+/* Poprawki dla ekranów dotykowych */
+@media (hover: none) and (pointer: coarse) {
+    .tool-btn, .action-btn, .brush-size-option {
+        min-height: 44px; /* Minimalny rozmiar dla dotyku */
+    }
+    
+    #colorPicker {
+        width: 70px;
+        height: 70px; /* Większy dla dotyku */
     }
 }

@@ -30,16 +30,16 @@ body {
 }
 
 h1 {
-    font-size: 150px;
+    font-size: 50px;
     color: #d4ffd2;
     text-shadow: 4px 4px 0 #5a3a5a;
 }
 
 
 .pixel-button {
-    width: 400px;
-    padding: 30px;
-    font-size: 40px;
+    width: 160px;
+    padding: 10px;
+    font-size: 20px;
     font-family: "Pixelify Sans", sans-serif;
     border-radius: 13px;
     background-color: #84a07d;
@@ -73,13 +73,13 @@ h1 {
 .back-btn {
     display: inline-block;
     margin-top: 30px;
-    padding: 35px;
+    padding: 10px;
     background-color: #7d99a0;
     color: white;
     text-decoration: none;
     border-radius: 10px;
     font-family: 'Pixelify Sans', sans-serif;
-    font-size: 35px;
+    font-size: 25px;
     transition: all 0.3s;
     border: 3px solid #5a787d;
 }
@@ -111,12 +111,12 @@ h1 {
 }
 
 .question-counter {
-    font-size: 55px;
+    font-size: 25px;
     color: #b8e0b8;
 }
 
 #question-text {
-    font-size: 45px;
+    font-size: 25px;
     margin-bottom: 40px;
     color: #ffd6e7;
     min-height: 100px;
@@ -126,15 +126,15 @@ h1 {
 }
 
 .options-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: flex;
     margin-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .option-btn {
-    padding: 25px;
-    font-size: 35px;
+    padding: 5px;
+    font-size: 25px;
     background-color: #7d8aa0;
     color: white;
     border: 4px solid #5a667d;
@@ -142,6 +142,8 @@ h1 {
     cursor: pointer;
     transition: all 0.3s;
     font-family: "Pixelify Sans", sans-serif;
+    width: 80%;
+    margin-top: 20px;
 }
 
 .option-btn:hover {
@@ -167,15 +169,11 @@ h1 {
 }
 
 .score-display {
-    font-size: 28px;
+    font-size: 18px;
     color: #ffd6e7;
 }
 
-/* Styl dla ekranu wyników */
-/* Styl dla ekranu wyników */
 .result-box {
-    background-color: rgba(90, 58, 90, 0.5);
-    border: 6px solid #ff9ebb;
     border-radius: 20px;
     padding: 40px;
     margin: 40px 0;
@@ -190,7 +188,7 @@ h1 {
 }
 
 #final-score {
-    font-size: 120px;
+    font-size: 50px;
     color: white;
     font-weight: bold;
     line-height: 1;
@@ -198,34 +196,67 @@ h1 {
 }
 
 .score-total {
-    font-size: 60px;
+    font-size: 30px;
     color: #ffd6e7;
     opacity: 0.8;
     line-height: 1;
 }
 
 .score-text {
-    font-size: 40px;
+    font-size: 20px;
     color: #ffd6e7;
     margin-top: 20px;
 }
 
 #result-message {
-    font-size: 32px;
+    font-size: 12px;
     color: #ffd6e7;
     margin: 20px 0;
     min-height: 60px;
 }
 
-.result-emoji {
-    font-size: 80px;
-    margin-top: 20px;
-}
+
 
 .result-buttons {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     margin-top: 40px;
+    padding: 5px;
+    width: 80%;
+    font-size: 10px;
+    
+}
+.end-button {
+    padding: 10px;
+    font-size: 20px;
+    font-family: "Pixelify Sans", sans-serif;
+    border-radius: 13px;
+    background-color: #84a07d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 15px;
+    transition: all 0.3s;
+    border: 4px solid #5a7854;
+    box-shadow: 0 6px 0 #3a5234;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.end-button:hover {
+    background-color: #95b58d;
+    transform: translateY(-3px);
+}
+
+.end-button:active {
+    transform: translateY(3px);
+    box-shadow: 0 3px 0 #3a5234;
+}
+
+.end-button.secondary {
+    background-color: #9d7bb5;
+    border-color: #7a5a92;
+    box-shadow: 0 6px 0 #5a3a72;
 }

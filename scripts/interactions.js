@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 document.querySelector(".reaction").style.display = "block";
                 document.getElementById("reactionImg").src = "img/holdHand.png";
-                document.getElementById("reactionImg").style.width = "530px";
+                document.getElementById("reactionImg").style.width = "200px";
                 setTimeout(function() {
                     document.querySelector(".reaction").style.display = "none";
                     document.getElementById("reactionImg").src = "";
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 document.querySelector(".reaction").style.display = "block";
                 document.getElementById("reactionImg").src = "img/kiss.png";
-                document.getElementById("reactionImg").style.width = "350px";
+                document.getElementById("reactionImg").style.width = "150px";
                 setTimeout(function() {
                     document.querySelector(".reaction").style.display = "none";
                     document.getElementById("reactionImg").src = "";
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 document.querySelector(".reaction").style.display = "block";
                 document.getElementById("reactionImg").src = "img/hug.png";
-                document.getElementById("reactionImg").style.width = "350px";
+                document.getElementById("reactionImg").style.width = "150px";
                 setTimeout(function() {
                     document.querySelector(".reaction").style.display = "none";
                     document.getElementById("reactionImg").src = "";
